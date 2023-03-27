@@ -5,9 +5,10 @@ import java.util.Map;
 
 public class HashTable {
 
-    // Uc2 = Ability to find frequency of words in a sentence.
+    // Uc2 = Ability to find frequency of words in a paragraph.
     public void freuencyOfWords(){
-        String line = "To be or not to be";
+        String line = "Paranoids are not paranoid because they are paranoid but\n" +
+                "because they keep putting themselves deliberately into paranoid avoidable situations";
         String newLine =   line.toLowerCase();   // convert line to lower case to avoid miscalculations.
 
         String[] sentence = newLine.split(" "); // split the sectence and store word in array.
@@ -22,7 +23,7 @@ public class HashTable {
             }
         }
 
-        System.out.println("Word  ==  frequency");
+            System.out.println("Word  ==  frequency");
         for (Map.Entry<String, Integer> print : table.entrySet()) {
 
             System.out.println(print.getKey() +"  ==  "+print.getValue());
