@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class HashTable {
 
-    // Uc2 = Ability to find frequency of words in a paragraph.
+    // Uc3 = Ability to remove specific word.
     public void freuencyOfWords(){
         String line = "Paranoids are not paranoid because they are paranoid but\n" +
                 "because they keep putting themselves deliberately into paranoid avoidable situations";
@@ -22,13 +22,12 @@ public class HashTable {
                 table.put(sentence[i], 1);
             }
         }
-
+        table.remove("avoidable");               // remove avoidable from the paragraph.
             System.out.println("Word  ==  frequency");
         for (Map.Entry<String, Integer> print : table.entrySet()) {
 
             System.out.println(print.getKey() +"  ==  "+print.getValue());
         }
-
     }
     public static void main(String[] args) {
         HashTable run = new HashTable();
