@@ -7,9 +7,7 @@ public class HashTable {
 
     // Uc2 = Ability to find frequency of words in a sentence.
     public void freuencyOfWords(){
-        String line = "Paranoids are not paranoid because they are paranoid but\n" +
-                "because they keep putting themselves deliberately into paranoid avoidable\n" +
-                "situations";
+        String line = "To be or not to be";
         String newLine =   line.toLowerCase();   // convert line to lower case to avoid miscalculations.
 
         String[] sentence = newLine.split(" "); // split the sectence and store word in array.
@@ -19,10 +17,12 @@ public class HashTable {
 
             if (table.containsKey(sentence[i])) {
                 table.put(sentence[i], table.get(sentence[i]) + 1);
+
             } else {
                 table.put(sentence[i], 1);
             }
         }
+
             System.out.println("Word  ==  frequency");
         for (Map.Entry<String, Integer> print : table.entrySet()) {
 
