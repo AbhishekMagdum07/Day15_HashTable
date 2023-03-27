@@ -14,7 +14,6 @@ public class HashTable {
         Hashtable<String,Integer> table = new Hashtable<>();
 
         for (int i = 0; i < sentence.length; i++) {
-
             if (table.containsKey(sentence[i])) {
                 table.put(sentence[i], table.get(sentence[i]) + 1);
 
@@ -23,11 +22,12 @@ public class HashTable {
             }
         }
 
-            System.out.println("Word  ==  frequency");
+        System.out.println("Word  ==  frequency");
         for (Map.Entry<String, Integer> print : table.entrySet()) {
 
             System.out.println(print.getKey() +"  ==  "+print.getValue());
         }
+
     }
     public static void main(String[] args) {
         HashTable run = new HashTable();
